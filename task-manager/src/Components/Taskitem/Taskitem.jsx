@@ -7,6 +7,12 @@ const Taskitem = ({ taskList,taskLists, setTaskLists }) => {
     setComplete(!complete);
   };
 
+  const handelDelete = (e)=>{
+    e.preventDefault()
+    const remainingTasks = taskLists.filter((e) => e.id !== taskList.id);
+    setTaskLists([...remainingTasks]);
+  }
+
   useEffect(() => {
     const remainingTasks = taskLists.filter((e) => e.id !== taskList.id);
     const completeTask = taskLists.find((e) => e.id === taskList.id);
@@ -20,7 +26,7 @@ const Taskitem = ({ taskList,taskLists, setTaskLists }) => {
         const updatedTasks = [...remainingTasks, completeTask];
         setTaskLists(updatedTasks);
     }
-  }, [complete]);
+  }, [complete])
   return (
     <div id="task-item-container">
       <form>
@@ -34,6 +40,7 @@ const Taskitem = ({ taskList,taskLists, setTaskLists }) => {
           />
           {taskList?.title}
         </label>
+        <button onClick={handelDelete}>X</button>
       </form>
     </div>
   );
