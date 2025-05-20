@@ -1,11 +1,16 @@
 
-
-
 body {
   margin: 0;
   padding: 0;
-  color: white
+  color: white;
+  background-color: #1A0E2A;
+}
 
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 

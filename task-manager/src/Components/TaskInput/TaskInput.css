@@ -1,3 +1,7 @@
+#taskInput-container{
+    padding: 50px 200px;
+}
+
 #form-style{
     display: flex;
     justify-content: space-between;
