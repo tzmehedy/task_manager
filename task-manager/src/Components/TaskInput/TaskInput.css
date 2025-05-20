@@ -1,0 +1,24 @@
+#form-style{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#form-style input{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+#form-style button{
+    border:none;
+    border-radius: 10px;
+    background-color: #6D40C9;
+    padding: 3px 10px ;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
